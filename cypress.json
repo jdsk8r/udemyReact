@@ -1,0 +1,8 @@
+{
+    "pageLoadTimeout": 20000,
+    "requestTimeout": 5000,
+    "defaultCommandTimeout": 20000,
+    "retries": 1,
+    "testFiles": "**/*.spec.js"
+  }
+  
