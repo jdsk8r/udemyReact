@@ -4,6 +4,11 @@ import ExpenseAmount from "./ExpenseAmount";
 import Card from "../UI/Card";
 
 function ExpenseItem(props) {
+  const clickHandler = () => {
+    console.log('Clicked!');
+  }
+
+
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
@@ -11,6 +16,7 @@ function ExpenseItem(props) {
         <h2 cy-data-selector="expenseDescription">{props.title}</h2>
         <ExpenseAmount amount={props.amount}/>
       </div>
+      <button onClick={clickHandler}>Change Title</button>
     </Card>
   );
 }
