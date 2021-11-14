@@ -2,11 +2,15 @@ import React from "react";
 import './ExpenseForm.css';
 
 function ExpenseForm() {
+    function titleChangeHandler(event){
+        console.log(event.target.value);
+    }
+    
     return <form>
         <div className="new-expense__controls">
             <div className="new-expense__control">
              <label aria-label="title">Title</label>
-             <input type="text" cy-data-selector="new-expense-title"/>
+             <input type="text" cy-data-selector="new-expense-title" onChange={titleChangeHandler}/>
             </div>
             <div className="new-expense__control">
              <label aria-label="amount">Amount</label>
