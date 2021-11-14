@@ -38,7 +38,7 @@ function ExpenseForm(props) {
     // });
   }
 
-  function submitHanlder(event) {
+  function submitHandlder(event) {
     event.preventDefault();
 
     const expenseData = {
@@ -54,7 +54,7 @@ function ExpenseForm(props) {
   }
 
   return (
-    <form onSubmit={submitHanlder}>
+    <form onSubmit={submitHandlder}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label aria-label="title">Title</label>
