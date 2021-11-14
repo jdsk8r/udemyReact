@@ -1,30 +1,62 @@
-import React from "react";
-import './ExpenseForm.css';
+import React, { useState } from "react";
+import "./ExpenseForm.css";
 
 function ExpenseForm() {
-    function titleChangeHandler(event){
-        console.log(event.target.value);
-    }
-    
-    return <form>
-        <div className="new-expense__controls">
-            <div className="new-expense__control">
-             <label aria-label="title">Title</label>
-             <input type="text" cy-data-selector="new-expense-title" onChange={titleChangeHandler}/>
-            </div>
-            <div className="new-expense__control">
-             <label aria-label="amount">Amount</label>
-             <input type="number" min="0.01" step="0.01" cy-data-selector="new-expense-amount"/>
-            </div>
-            <div className="new-expense__control">
-             <label aria-label="date">Date</label>
-             <input type="date" min="2021-01-01" max="2023-12-31" cy-data-selector="new-expense-date"/>
-            </div>                        
+  const [enteredTitle, setEnteredTitle] = useState('');
+  const [enteredAmount, setEnteredAmount] = useState('');
+  const [enteredDate, setEnteredDate] = useState('');
+
+  function titleChangeHandler(event) {
+    setEnteredTitle(event.target.value);
+  }
+
+  function amountChangeHandler(event) {
+    setEnteredAmount(event.target.value);
+  }
+
+  function dateChangeHandler(event) {
+    setEnteredDate(event.target.value);
+  }
+
+  return (
+    <form>
+      <div className="new-expense__controls">
+        <div className="new-expense__control">
+          <label aria-label="title">Title</label>
+          <input
+            type="text"
+            cy-data-selector="new-expense-title"
+            onChange={titleChangeHandler}
+          />
         </div>
-        <div className="new-expense__actions">
-            <button type="submit" cy-data-selector="add-new-expense">Add expense</button>
+        <div className="new-expense__control">
+          <label aria-label="amount">Amount</label>
+          <input
+            type="number"
+            min="0.01"
+            step="0.01"
+            cy-data-selector="new-expense-amount"
+            onChange={amountChangeHandler}
+          />
         </div>
+        <div className="new-expense__control">
+          <label aria-label="date">Date</label>
+          <input
+            type="date"
+            min="2021-01-01"
+            max="2023-12-31"
+            cy-data-selector="new-expense-date"
+            onChange={dateChangeHandler}
+          />
+        </div>
+      </div>
+      <div className="new-expense__actions">
+        <button type="submit" cy-data-selector="add-new-expense">
+          Add expense
+        </button>
+      </div>
     </form>
+  );
 }
 
 export default ExpenseForm;
