@@ -48,6 +48,9 @@ function ExpenseForm() {
     };
 
     console.log(expenseData);
+    setEnteredTitle('');
+    setEnteredAmount('');
+    setEnteredDate('');
   }
 
   return (
@@ -59,6 +62,7 @@ function ExpenseForm() {
             type="text"
             cy-data-selector="new-expense-title"
             onChange={titleChangeHandler}
+            value={enteredTitle}
           />
         </div>
         <div className="new-expense__control">
@@ -69,6 +73,7 @@ function ExpenseForm() {
             step="0.01"
             cy-data-selector="new-expense-amount"
             onChange={amountChangeHandler}
+            value={enteredAmount}
           />
         </div>
         <div className="new-expense__control">
@@ -79,6 +84,7 @@ function ExpenseForm() {
             max="2023-12-31"
             cy-data-selector="new-expense-date"
             onChange={dateChangeHandler}
+            value={enteredDate}
           />
         </div>
       </div>
