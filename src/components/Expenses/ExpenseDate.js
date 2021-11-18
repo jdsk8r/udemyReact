@@ -7,9 +7,15 @@ function ExpenseDate(props) {
 
   return (
     <div className="expense-date">
-      <div className="expense-date__day" cy-data-selector="expenseDay">{day}</div>
-      <div className="expense-date__month" cy-data-selector="expenseMonth">{month}</div>
-      <div className="expense-date__year" cy-data-selector="expenseYear">{year}</div>
+      <div className="expense-date__day" cy-data-selector="expenseDay">
+        {day}
+      </div>
+      <div className="expense-date__month" cy-data-selector="expenseMonth">
+        {month}
+      </div>
+      <div className="expense-date__year" cy-data-selector="expenseYear">
+        {year}
+      </div>
     </div>
   );
 }
