@@ -20,8 +20,8 @@ function Expenses(props) {
         />
         {props.items
           .filter(
-            (filteredExpense) => 
-              filteredExpense.date.getFullYear() == filteredYear
+            (filteredExpense) =>
+              filteredExpense.date.getFullYear().toString() === filteredYear
           )
           .map((expense) => (
             <ExpenseItem
