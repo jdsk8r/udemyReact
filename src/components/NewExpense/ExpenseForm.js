@@ -89,7 +89,14 @@ function ExpenseForm(props) {
         </div>
       </div>
       <div className="new-expense__actions">
-        <button type="submit" cy-data-selector="add-new-expense">
+        <button
+          type="button"
+          cy-data-selector="cancel"
+          onClick={props.onCancel}
+        >
+          Cancel
+        </button>
+        <button type="submit" cy-data-selector="add-expense">
           Add expense
         </button>
       </div>
