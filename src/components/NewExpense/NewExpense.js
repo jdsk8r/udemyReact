@@ -23,7 +23,7 @@ function NewExpense(props) {
   }
 
   return (
-    <div className="new-expense">
+    <div className="new-expense" cy-data-selector="new-expense-form">
       {!isEditing && (
         <button
           cy-data-selector="add-new-expense"
