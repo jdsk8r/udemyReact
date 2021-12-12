@@ -54,7 +54,7 @@ function ExpenseForm(props) {
   }
 
   return (
-    <form onSubmit={submitHandlder}>
+    <form onSubmit={submitHandlder} cy-data-selector="new-expense-form">
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label aria-label="title">Title</label>
