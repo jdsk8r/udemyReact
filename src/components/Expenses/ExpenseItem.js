@@ -6,8 +6,8 @@ import React from "react";
 
 function ExpenseItem(props) {
   return (
-    <li>
-      <Card className="expense-item" cy-data-selector="expense-item">
+    <li cy-data-selector="expense-item">
+      <Card className="expense-item" >
         <ExpenseDate date={props.date} />
         <div className="expense-item__description">
           <h2 cy-data-selector="expenseDescription">{props.title}</h2>
