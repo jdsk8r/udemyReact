@@ -81,7 +81,7 @@ function ExpenseForm(props) {
           <input
             type="date"
             min="2021-01-01"
-            max="2023-12-31"
+            max="2026-12-31"
             cy-data-selector="new-expense-date"
             onChange={dateChangeHandler}
             value={enteredDate}
