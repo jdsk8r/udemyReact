@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 
+const START_YEAR = 2021;
+
 function ExpenseForm(props) {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
@@ -53,6 +55,8 @@ function ExpenseForm(props) {
     setEnteredDate("");
   }
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <form onSubmit={submitHandlder} cy-data-selector="new-expense-form">
       <div className="new-expense__controls">
@@ -80,8 +84,8 @@ function ExpenseForm(props) {
           <label aria-label="date">Date</label>
           <input
             type="date"
-            min="2021-01-01"
-            max="2026-12-31"
+            min={`${START_YEAR}-01-01`}
+            max={`${currentYear}-12-31`}
             cy-data-selector="new-expense-date"
             onChange={dateChangeHandler}
             value={enteredDate}
