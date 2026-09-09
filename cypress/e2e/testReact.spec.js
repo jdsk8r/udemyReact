@@ -3,6 +3,6 @@
 describe('Testing react-web', () => {
     
     it('Visit main page', () => {
-        cy.visit('http://localhost:3000/')
+        cy.visit('/')
     })
 })
